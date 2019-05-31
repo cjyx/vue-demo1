@@ -1,0 +1,157 @@
+@import "variable.less";
+/*文字*/
+.group-size{
+  //padding: 16% 0 0 0;
+  width:40%;
+  .info-list{
+    width:80%;
+    margin: 24px 0 10px;
+  }
+  h1{
+    background: url(../assets/img/job-01.png) no-repeat bottom left;
+    background-size: 100% auto;
+    display: inline;
+    font-size:48px;
+    letter-spacing:3px;
+    font-style: italic;
+  }
+  p{
+    color: @font-color-base;
+    opacity: 0.6;
+    font-size: @font-size-small;
+    line-height: 28px;
+
+  }
+  ul{
+    margin-top: 20px;
+    li{
+      color: @font-color-base;
+      opacity: 0.6;
+      font-size: @font-size-small;
+      line-height: 24px;
+      span{
+        padding-right: 12px;
+        font-size:14px;
+      }
+    }
+  }
+  button{
+    width: 132px;
+    height: 44px;
+    letter-spacing: 2px;
+    background: @btn-color-base;
+    color: @font-color-base;
+    border-radius: 3px;
+    margin-top: 30px;
+    padding-left: 15px;
+    i{
+      margin-left: 12px;
+      opacity: 0.4;
+    }
+    &:hover{
+      background: @btn-color-hover;
+      i{
+        opacity: 1;
+      }
+    }
+    &:active{
+      background: @btn-color-click;
+    }
+  }
+}
+/*平行四边形*/
+.bg-skew{
+  position: relative;
+  width:90%;
+  height: 100%;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(7,7,7,0.84);
+    transform: skew(-19deg);
+  }
+}
+/*序号*/
+//.btn {
+//  position: relative;
+//  span {
+//    background: rgba(63,92,179,0.3);
+//    display: inline-block;
+//    font-size: @font-size-small;
+//    color: @font-color-base;
+//    text-align: center;
+//    margin: 0 8px;
+//    width: 26px;
+//    height: 26px;
+//    line-height: 26px;
+//    border-radius: 2px;
+//    cursor: pointer;
+//    &.btnActive {
+//      background: @bg-color-blue;
+//    }
+//  }
+//}
+.btn{
+  text-align: right;
+  position: relative;
+  z-index: 2;
+  span{
+    font-size:14px;
+    opacity: 0.2;
+    margin: 0 5px;
+    transition: opacity 0.5s;
+    display: inline-block;
+    font-size: @font-size-small;
+    color: @font-color-base;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer;
+    &.btnActive{
+      opacity: 1;
+      font-size:16px;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+.animate-duration{
+  animation-duration:0.5s
+}
+.animate-delay{
+  animation-delay:0.5s;
+}
+.animate-delay-time{
+  animation-delay:0.8s;
+}
+@media (max-width: 1440px) {
+  .main-content {
+    .group-size {
+      left: 8%;
+      h1 {
+        font-size: 36px;
+      }
+      .info-list {
+        width: 88%;
+        margin: 20px 0 6px;
+      }
+      button{
+        width: 120px;
+        height: 38px;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .main-content {
+    .group-size {
+      .info-list {
+        width: 90%;
+      }
+    }
+  }
+}

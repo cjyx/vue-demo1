@@ -1,0 +1,65 @@
+@import "../../less/variable.less";
+
+.video-control{
+  opacity: 0.64;
+}
+.main-content{
+  .bg-skew{
+    @media screen {
+      left: -35%;
+      @media (max-width: 1440px) {
+        left:-39%;
+      }
+      @media (max-width: 1280px) {
+        left:-40%;
+      }
+    }
+  }
+  &.home-group{
+    @media screen {
+      overflow: hidden;
+      left: 10%;
+      top: 32%;
+      @media (max-width: 1280px) {
+        left: 90px;
+      }
+    }
+  }
+}
+.line{
+  @media screen {
+    position: absolute;
+    top: 36%;
+    left: 0;
+    width: 8%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    @media (max-width:1920px) and (min-width: 1680px){
+      //top:36%
+    }
+    @media (max-width: 1440px) {
+      //top:32%
+    }
+    @media (max-width: 1280px) {
+      width: 65px;
+      //top: 30%;
+    }
+  }
+}
+.animate-duration-time1{
+  animation-duration:1.5s
+}
+.animate-delay-time1{
+  animate-delay:0.3s
+}
+
+
+.yaogan{
+  width:70px;
+  transition: all 0.5s;
+  &.checked{
+    transform:rotateX(180deg);
+  }
+}
+

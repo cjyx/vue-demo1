@@ -1,0 +1,193 @@
+@import "variable.less";
+@font-face {
+  font-family: 'PingFangMedium';
+  src: url('../assets/font/PingFang-Medium.eot');
+  src: url('../assets/font/PingFang-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../assets/font/PingFang-Medium.woff') format('woff'),
+  url('../assets/font/PingFang-Medium.ttf') format('truetype')
+}
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4, h5, h6, i, b,
+textarea, button, input, select, figure, figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+  font-family:"PingFangMedium", "Microsoft Yahei", 'Avenir', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: @font-size-base;
+  min-width: 1024px;
+  min-height: 600px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*导航*/
+#header{
+  @media screen {
+    width:90%;
+    margin: 2.4% auto;
+    height:40px;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1;
+    &>img{
+      width: auto;
+      max-height: 40px;
+    }
+    .nav{
+      float: right;
+      li{
+        float: left;
+        line-height: 40px;
+        padding-left:24px;
+        &:after{
+          content: "/";
+          padding-left:24px;
+          color: @font-color-base;
+          opacity: 0.4;
+          font-size: 12px;
+        }
+        &:last-child:after{
+          content: "";
+        }
+        a{
+          color: @font-color-base;
+          &.router-link-active {
+            color: @font-color-blue;
+            border-bottom:2px solid @bg-color-blue;
+            padding-bottom: 4px;
+          }
+        }
+      }
+    }
+    @media (max-width: 1280px) {
+      width:92%;
+      margin: 2.4% 0 0 5%;
+    }
+  }
+}
+/*分享*/
+#share-logo{
+  @media screen {
+    width: 86%;
+    margin: 2% auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    a {
+      width: 34px;
+      height: 34px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      display: inline-block;
+      border-radius: 50%;
+      color: rgba(255, 255, 255, 0.3);
+      margin-right: 15px;
+      transition: 1s;
+      position: relative;
+      i {
+        line-height: 34px;
+        font-size: 18px;
+      }
+      &:hover {
+        background: rgba(255, 255, 255, 0.4);
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .sina-qr {
+        position: absolute;
+        left: 0;
+        bottom: 45px;
+        width: 116px;
+        & > div {
+          position: relative;
+          display: block;
+          left: -32%;
+          text-align: center;
+          padding: 8px;
+          background-color: #fff;
+          border-radius: 5px;
+          &:after {
+            content: '';
+            position: absolute;
+            border: 8px solid transparent;
+            border-top-color: #fff;
+            top: 100%;
+            left: 40%;
+          }
+          img {
+            width: 100px;
+          }
+          span {
+            color: #000;
+            font-size: @font-size-small*0.9;
+            display: inline-block;
+          }
+        }
+
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    width:90%;
+  }
+}
+
+/*视频样式*/
+.video-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  .video-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+.video-control{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #0b0d15;
+  opacity: 0.86;
+  color: @font-color-base;
+}
+.main-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 1024px;
+  min-height: 600px;
+  left: 0;
+  top: 0;
+  color: #fff;
+}
+
+@import "common.less";
