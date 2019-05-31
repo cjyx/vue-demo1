@@ -1,6 +1,9 @@
 # cl-h5
 
 > A Vue.js project
+主要用的技术：
+vue2.0 
+
 
 ## Build Setup
 
