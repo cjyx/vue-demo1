@@ -1,8 +1,8 @@
 # cl-h5
 
 > A Vue.js project
-主要用的技术：
-vue2.0 
+
+>技术：主要使用vue2.0版本开发，结合vuex、vue-router、vue-swripe
 
 
 ## Build Setup
