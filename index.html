@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+    <title>车联天下</title>
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      //判断移动还是pc
+//      window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "https://www.baidu.com/" :  "http://jd.com/";
+      var browser = navigator.appName
+      var b_version = navigator.appVersion
+      var version = b_version.split(";");
+      var trim_Version = version[1].replace(/[ ]/g, "");
+      if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE6.0") {
+        window.location = './static/obsolete.html';
+      }
+      else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE7.0") {
+        window.location = './static/obsolete.html';
+      }
+      else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE8.0") {
+        window.location = './static/obsolete.html';
+      }
+      else if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE9.0") {
+        // alert("IE 9.0");
+      }
+    </script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
