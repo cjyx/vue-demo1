@@ -4,6 +4,7 @@
 
 >技术：主要使用vue2.0版本开发，结合vuex、vue-router、vue-awesome-swiper
 
+>链接地址：http://www.auto-link.com.cn/#/home
 
 ## Build Setup
 
